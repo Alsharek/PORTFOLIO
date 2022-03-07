@@ -1,5 +1,4 @@
-import './style.css';
-import './index.html';
+require('./style;css')
 import * as THREE from 'three';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 //import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js';
