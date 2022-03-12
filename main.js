@@ -1,9 +1,9 @@
-import './style.css'
+import './style.css';
 import * as THREE from 'three';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 //import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { Color, LatheGeometry, Loader } from 'three';
+//import { Color, LatheGeometry, Loader } from 'three';
 
 //.........................................................
 const scene = new THREE.Scene();
@@ -26,7 +26,7 @@ const material = new THREE.MeshNormalMaterial({color:0xff6347 , wireframe:true }
 const tours = new THREE.Mesh (geometry,material);
 scene.add(tours)
 //GEO OBG 2...............
-const latheTexture = new THREE.TextureLoader().load('cyber3.jpg')
+const latheTexture = new THREE.TextureLoader().load('/asset/cyber3.jpg')
 const lathe = new THREE.Mesh(
 new THREE.SphereGeometry(2,2,2),
 new THREE.MeshBasicMaterial( { map: latheTexture} ) 
@@ -38,7 +38,7 @@ lathe.position.x = 5.9;
 lathe.position.y = 3;
 //GEO OBG 3...............
 
-const obg3Texture = new THREE.TextureLoader().load('cyber3.jpg')
+const obg3Texture = new THREE.TextureLoader().load('/asset/cyber3.jpg')
 const obg3 = new THREE.Mesh(
 new THREE.SphereGeometry(1,1,1),
 new THREE.MeshBasicMaterial( { map: latheTexture} ) 
@@ -49,7 +49,7 @@ obg3.position.z = 28;
 obg3.position.x = 3;
 obg3.position.y = 2;
 //GEO OBG 4...............
-const obg4Texture = new THREE.TextureLoader().load('cyber3.jpg')
+const obg4Texture = new THREE.TextureLoader().load('/asset/cyber3.jpg')
 const obg4 = new THREE.Mesh(
 new THREE.SphereGeometry(1,1,1),
 new THREE.MeshBasicMaterial( { map: latheTexture} ) 
@@ -139,11 +139,11 @@ gltfLoader.load(
 
 
 // BACKGROUND .......
-const cyberTexture = new THREE.TextureLoader().load ('backgroundx.jpg');
+const cyberTexture = new THREE.TextureLoader().load ('/asset/backgroundx.jpg');
 scene.background = cyberTexture;
 //.............................................................
 // Avatar 
-    const avatarTexture = new THREE.TextureLoader().load('GEEKCUTTER.png')
+    const avatarTexture = new THREE.TextureLoader().load('/asset/GEEKCUTTER.png')
     const avatar = new THREE.Mesh(
     new THREE.BoxGeometry(2,2,2,100),
     new THREE.MeshBasicMaterial( { map: avatarTexture} ) 
@@ -154,8 +154,8 @@ scene.background = cyberTexture;
     avatar.position.x = -3;
     //........................................................
     // FLY obg 1 
-    const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-    const normalTexture = new THREE.TextureLoader().load('moonmap.jpg');
+    const moonTexture = new THREE.TextureLoader().load('/asset/moon.jpg');
+    const normalTexture = new THREE.TextureLoader().load('/asset/moonmap.jpg');
     const moon = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
     new THREE.MeshStandardMaterial({
